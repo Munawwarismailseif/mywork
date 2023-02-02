@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    
+    <h1>List of Cars</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Car Name</th>
+                <th>Manufacture</th>
+                <th>Engine Type</th>
+                <th>Color</th>
+                <th>Automation</th>
+                <th>Speed</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for item in car %}
+            <tr>
+                <td>{{forloop.counter}}</td>
+                <td>{{item.car_name}}</td>
+                <td>{{item.manufacture}}</td>
+                <td>{{item.engine_type}}</td>
+                <td>{{item.color}}</td>
+                <td>{{item.automation}}</td>
+                <td>{{item.speed}}</td>
+                <td>{{item.price}}</td>
+            </tr>
+            {% endfor%}
+        </tbody>
+    </table>
+    {% endblock pageContent %}
+</body>
+
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<body>
+    
+    <h1>List of Cars</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Car Name</th>
+                <th>Manufacture</th>
+                <th>Engine Type</th>
+                <th>Color</th>
+                <th>Automation</th>
+                <th>Speed</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for item in car %}
+            <tr>
+                <td>{{forloop.counter}}</td>
+                <td>{{item.car_name}}</td>
+                <td>{{item.manufacture}}</td>
+                <td>{{item.engine_type}}</td>
+                <td>{{item.color}}</td>
+                <td>{{item.automation}}</td>
+                <td>{{item.speed}}</td>
+                <td>{{item.price}}</td>
+            </tr>
+            {% endfor%}
+        </tbody>
+    </table>
+    {% endblock pageContent %}
+</body>
+
+</html>

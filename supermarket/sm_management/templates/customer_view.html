@@ -1,0 +1,19 @@
+{% block pageContent %} {% load  crispy_forms_tags %}
+<!DOCTYPE html>
+<html>
+<title>Supermarket management </title>
+
+<body>
+    {% block navigation %} {% include 'navigation.html'%} {%endblock navigation%}
+    <h1 style="color:rgb(23, 23, 75);">WELCOME TO MUNEVVER SUPERMARKET</h1>
+    <h2 style="background-color:DodgerBlue;">Dear customer....Kindly add your information below</h2>
+    <p style="background-color:Tomato;">customer information</p>
+   <form method='POST'>
+       {% csrf_token %} {{ customer_form|crispy}}
+       <button type='submit'>submit</button>
+   </form>
+   
+</body>
+
+{% endblock pageContent %}
+</html>

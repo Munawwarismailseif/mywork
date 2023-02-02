@@ -1,0 +1,54 @@
+{% block pageContent %}
+<!DOCTYPE html>
+<html>
+    <style>
+        table{
+            font-family:arial,sans-serif;
+            border-collapse:collapse;
+            width:100%;
+        }
+        td, th{
+            border:1px solid #dddddd;
+            text-align:left;
+            padding:8px;
+        }
+        tr:nth-child(even){
+            background-color: #dddddd;
+        }
+    </style>
+
+<body>
+    {% block navigation %} {% include 'navigation.html'%} {%endblock navigation%}
+    
+    <h1>List of customer</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>customer id</th>
+                <th>customer Name</th>
+                <th>customer address</th>
+                <th>customer phone</th>
+               
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for item in customers %}
+            <tr>
+                <td>{{forloop.counter}}</td>
+                <td>{{item.cust_id}}</td>
+                <td>{{item.cust_name}}</td>
+                <td>{{item.cust_address}}</td>
+                <td>{{item.cust_phone}}</td>
+               
+            </tr>
+            {% endfor%}
+        </tbody>
+    </table>
+    {% endblock pageContent %}
+</body>
+
+
+</html>

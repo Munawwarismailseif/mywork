@@ -1,0 +1,33 @@
+<html>
+<head>
+  <style>
+      .topnav{
+          overflow:hidden;
+          background-color:#333
+      }
+      /* Navbar links*/
+      .topnav a{
+          float:left;
+          display:block;
+          color:#f2f2f2;
+          text-align:center;
+          padding:14px 16px;
+          text-decoration:none;
+      }
+      /*links-change color on hover*/
+      .topnav a:hover{
+          background-color: #ddd;
+          color:black;
+      }
+
+
+  </style>
+</head>
+<body>
+    <div class="topnav">
+        <a href="{%url 'sm_management:homepage'%}">Home</a>
+        <a href="customer view">Add new customer</a>
+        <a href="customer list">view customer</a>
+    </div>
+</body>
+</html>
